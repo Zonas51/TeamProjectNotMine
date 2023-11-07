@@ -1,0 +1,15 @@
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\TeamProject.exe.config
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\TeamProject.exe
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\TeamProject.pdb
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.AssemblyReference.cache
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MainWindow.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\App.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject_MarkupCompile.cache
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject_MarkupCompile.lref
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MainWindow.baml
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.g.resources
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.Properties.Resources.resources
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.GenerateResource.cache
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CoreCompileInputs.cache
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.exe
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.pdb

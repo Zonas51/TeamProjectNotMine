@@ -20,9 +20,36 @@ namespace TeamProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<string> QuestionList = new List<string>();
+        public static List<string> AnswerList = new List<string>();
+        public static List<string> UserAnswerList = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+        public static List<string> GetQuestionList()
+        {
+            return QuestionList;
+        }
+        public static void SetQuestionList()
+        {
+            throw new NotImplementedException(); //TODO:!!!
+        }
+        public static List<string> GetAnswerList()
+        {
+            return QuestionList;
+        }
+        public static void SetAnswerList()
+        {
+            throw new NotImplementedException(); //TODO:!!!
+        }
+        public static List<string> GetUserAnswerList()
+        {
+            return QuestionList;
+        }
+        public static void AddUserAnswer()
+        {
+            throw new NotImplementedException(); //TODO:!!!
         }
     }
 }
