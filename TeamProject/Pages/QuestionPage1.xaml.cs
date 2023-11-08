@@ -27,5 +27,10 @@ namespace TeamProject.Pages
             DataContext = this;
             InitializeComponent();
         }
+
+        private void AcceptBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

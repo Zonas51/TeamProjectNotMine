@@ -24,5 +24,10 @@ namespace TeamProject.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnStartClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
