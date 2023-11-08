@@ -27,7 +27,8 @@ namespace TeamProject.Pages
 
         private void BtnStartClick(object sender, RoutedEventArgs e)
         {
-            
+            ExerciseController.i = 5;
+            ExerciseController.NavigateQuestion(this.NavigationService);
         }
     }
 }

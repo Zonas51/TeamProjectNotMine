@@ -20,36 +20,34 @@ namespace TeamProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static List<string> QuestionList = new List<string>();
-        public static List<string> AnswerList = new List<string>();
-        public static List<string> UserAnswerList = new List<string>();
+        public static Random rand = new Random();
+        private static List<string> QuestionList = new List<string>();
+        private static List<string> AnswerList = new List<string>(); //TODO: сделать 1 лист для ответа пользователя (bool)
+        private static List<string> UserAnswerList = new List<string>();
+        public static int QuestionNumber { get; set; } = 5;
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Content = new Pages.StartPage();
         }
         public static List<string> GetQuestionList()
         {
             return QuestionList;
         }
-        public static void SetQuestionList()
-        {
-            throw new NotImplementedException(); //TODO:!!!
-        }
         public static List<string> GetAnswerList()
         {
-            return QuestionList;
-        }
-        public static void SetAnswerList()
-        {
-            throw new NotImplementedException(); //TODO:!!!
+            return AnswerList;
         }
         public static List<string> GetUserAnswerList()
         {
-            return QuestionList;
+            return UserAnswerList;
         }
-        public static void AddUserAnswer()
+
+        public static void AddAnswer(string question, string answer, string userAnswer)
         {
-            throw new NotImplementedException(); //TODO:!!!
+            QuestionList.Add(question);
+            AnswerList.Add(answer);
+            UserAnswerList.Add(userAnswer);
         }
     }
 }

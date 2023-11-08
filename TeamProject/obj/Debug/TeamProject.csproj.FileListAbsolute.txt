@@ -13,3 +13,12 @@ C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.cspro
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CoreCompileInputs.cache
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.exe
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.pdb
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\EndPage.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPage1.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\StartPage.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPage1.baml
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\StartPage.baml
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\EndPage.baml
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\Spire.XLS.dll
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\Spire.XLS.xml
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CopyComplete

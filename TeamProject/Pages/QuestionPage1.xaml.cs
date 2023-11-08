@@ -20,17 +20,27 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class QuestionPage1 : Page
     {
-        string text { get; set; }
-        public QuestionPage1(string text)
+        private static AnagramGetter Ag = new AnagramGetter();
+        public static string QuestionText { get; set; } = "text";
+        private static List<string> QuestionList = Ag.GetExercise("AnagramQuestions.txt");
+        private static List<string> AnswerList = Ag.GetAnswers("AnagramAnswers.txt");
+        private string UserAnswer;
+        private int question;
+
+        public QuestionPage1()
         {
-            this.text = text;
+            question = MainWindow.rand.Next(AnswerList.Count);
+            QuestionText = QuestionList[question];
             DataContext = this;
             InitializeComponent();
         }
 
+
         private void AcceptBtnClick(object sender, RoutedEventArgs e)
         {
-
+            UserAnswer = InputBox.Text;
+            MainWindow.AddAnswer(QuestionList[question], AnswerList[question], UserAnswer);
+            ExerciseController.NavigateQuestion(this.NavigationService);
         }
     }
 }

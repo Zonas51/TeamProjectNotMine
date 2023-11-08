@@ -9,7 +9,6 @@
       Title="QuestionPage1"
       Background="White">
 
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -22,8 +21,9 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="Question" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center"
                    TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="30"
-                   Text="{Binding text}"></TextBlock>
-        <Button x:Name="AcceptBtn" Grid.Column="2" Grid.Row="1" Margin="30,80" Content="Подтвердить" FontSize="25" Click="AcceptBtnClick"></Button>
+                   Text="{Binding QuestionText}"></TextBlock>
+        <Button x:Name="AcceptBtn" Grid.Column="2" Grid.Row="1" Margin="30,80"
+                Content="Продолжить" FontSize="25" Click="AcceptBtnClick"></Button>
         <TextBox x:Name="InputBox" Grid.Row="1" Grid.Column="1" Margin="10,50"></TextBox>
     </Grid>
 </Page>
