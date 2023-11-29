@@ -14,7 +14,20 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="Start" Grid.Row="1" Content="Начать" Margin="200,75" FontSize="20" Click="BtnStartClick"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="StartAnagram" 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Content="Анаграммы" 
+                Margin="30" 
+                FontSize="20" 
+                Click="BtnAnagramClick"
+                >
+        </Button>
+
     </Grid>
 
 </Page>

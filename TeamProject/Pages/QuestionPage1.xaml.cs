@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,17 +21,24 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class QuestionPage1 : Page
     {
-        private static AnagramGetter Ag = new AnagramGetter();
-        public static string QuestionText { get; set; } = "text";
-        private static List<string> QuestionList = Ag.GetExercise("AnagramQuestions.txt");
-        private static List<string> AnswerList = Ag.GetAnswers("AnagramAnswers.txt");
-        private string UserAnswer;
+        private int QuestionCount;
+        private List<string> AllQuestionList;
+        private List<string> AllAnswerList;
+        private ExerciseAnagram exercise = new ExerciseAnagram();
+        private Random Random = new Random();
+        public string QuestionText { get; set; }
         private int question;
 
-        public QuestionPage1()
+
+        public QuestionPage1(int questionCount)
         {
-            question = MainWindow.rand.Next(AnswerList.Count);
-            QuestionText = QuestionList[question];
+            QuestionCount = questionCount;
+            AnagramQuestionGetter ag = new AnagramQuestionGetter();
+            AllQuestionList = ag.GetQuestions("AnagramQuestions.txt");
+            AllAnswerList = ag.GetAnswers("AnagramAnswers.txt");
+
+            question = Random.Next(AllAnswerList.Count);
+            QuestionText = AllQuestionList[question];
             DataContext = this;
             InitializeComponent();
         }
@@ -38,9 +46,25 @@ namespace TeamProject.Pages
 
         private void AcceptBtnClick(object sender, RoutedEventArgs e)
         {
-            UserAnswer = InputBox.Text;
-            MainWindow.AddAnswer(QuestionList[question], AnswerList[question], UserAnswer);
-            ExerciseController.NavigateQuestion(this.NavigationService);
+            exercise.QuestionList.Add(AllQuestionList[question]);
+            exercise.AnswerList.Add(AllAnswerList[question]);
+            QuestionCount--;
+            if (InputBox.Text == AllAnswerList[question])
+            {
+                exercise.UserCorrectAnswersCount++;
+            }
+
+            if (QuestionCount == 0)
+            {
+                NavigationService.Navigate(new EndPage(exercise));
+            }
+            else
+            {
+                question = Random.Next(AllAnswerList.Count);
+                QuestionText = AllQuestionList[question];
+                Question.Text = QuestionText;
+                InputBox.Text = "";
+            }
         }
     }
 }

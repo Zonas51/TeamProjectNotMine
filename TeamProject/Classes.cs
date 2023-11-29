@@ -15,44 +15,32 @@ namespace TeamProject
 {
     public class User : IUser
     {
-        public User(string name, string group, string age, List<string> answers) 
+        public User(string name, string group, string age, IExercise exercise) 
         {
             Name = name;
             Group = group;
             Age = age;
-            Answers = answers;
+            Exercise = exercise;
         }
         public string Name { get; set; }
         public string Group { get; set; }
         public string Age { get; set; }
-        public List<string> Answers { get; set; }
+        public IExercise Exercise { get; set; }
     }
-    public static class ExerciseController
+    public class ExerciseAnagram : IExercise
     {
-        public static int i { get; set; } = 0;
+        public List<string> QuestionList { get; set; } = new List<string>();
+        public List<string> AnswerList { get; set; } = new List<string>();
+        public int UserCorrectAnswersCount { get; set; } = 0;
 
-        private static int GetRandPageType() { return 0; } //TODO: make random
-        public static void NavigateQuestion(NavigationService nav)
+        public int GetUserCorrectAnswersCount()
         {
-            if (i > 0)
-            {
-                i--;
-                switch (GetRandPageType())
-                {
-                    case 0:
-                        nav.Navigate(new QuestionPage1());
-                        break;
-                }
-            }
-            else
-            {
-                nav.Navigate(new EndPage());
-            }
+            return UserCorrectAnswersCount;
         }
     }
-    public abstract class ExerciseGetter : IGetter
+    public abstract class ExerciseQuestionGetter : IGetter
     {
-        internal List<string> ReadListFromFile(string filename, string foldername)
+        internal static List<string> ReadListFromFile(string filename, string foldername)
         {
             //TODO: make it read each line individually
             string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
@@ -71,14 +59,14 @@ namespace TeamProject
         {
             return ReadListFromFile(filename, "Answers");
         }
-        public virtual List<string> GetExercise(string filename)
+        public virtual List<string> GetQuestions(string filename)
         {
             return ReadListFromFile(filename, "Questions");
         }
     }
-    public class AnagramGetter : ExerciseGetter
+    public class AnagramQuestionGetter : ExerciseQuestionGetter
     {
-        public override List<string> GetExercise(string filename)
+        public override List<string> GetQuestions(string filename)
         {
 
             List<string> list = ReadListFromFile(filename, "Questions");
@@ -107,7 +95,7 @@ namespace TeamProject
             return new string(array);
         }
     }
-    public class MathGetter : IGetter
+    public class MathQuestionGetter : ExerciseQuestionGetter
     {
         public List<string> GetAnswers(string filename)
         {
@@ -132,9 +120,10 @@ namespace TeamProject
             Worksheet worksheet = workbook.Worksheets[0];
 
             worksheet.InsertRow(1);
-            worksheet.Range[1, 1].Value = $"{usr.Name}";
-            worksheet.Range[1, 2].Value = $"{usr.Group}";
-            worksheet.Range[1, 3].Value = $"{usr.Age}";
+            worksheet[1, 1].Text = $"{usr.Name}";
+            worksheet[1, 2].Text = $"{usr.Group}";
+            worksheet[1, 3].Text = $"{usr.Age}";
+            worksheet[1, 4].Text = $"{usr.Exercise.UserCorrectAnswersCount}/{usr.Exercise.AnswerList.Count}";
 
             workbook.SaveToFile("Results.xlsx", ExcelVersion.Version2016);
         }

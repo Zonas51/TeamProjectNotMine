@@ -20,14 +20,16 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class EndPage : Page
     {
-        public EndPage()
+        IExercise exercise;
+        public EndPage(IExercise ex)
         {
+            exercise = ex;
             InitializeComponent();
         }
 
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
-            User user = new User(Name.Text,Group.Text,Age.Text, MainWindow.GetAnswerList());
+            IUser user = new User(Name.Text,Group.Text,Age.Text, exercise);
             ExcelSaver ex = new ExcelSaver();
             ex.Save(user);
             Application.Current.Shutdown();

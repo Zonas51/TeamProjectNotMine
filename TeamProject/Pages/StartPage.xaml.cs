@@ -25,10 +25,14 @@ namespace TeamProject.Pages
             InitializeComponent();
         }
 
-        private void BtnStartClick(object sender, RoutedEventArgs e)
+        private void BtnAnagramClick(object sender, RoutedEventArgs e)
         {
-            ExerciseController.i = 5;
-            ExerciseController.NavigateQuestion(this.NavigationService);
+            NavigationService.Navigate(new QuestionPage1(5));
+        }
+
+        private void BtnMathClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

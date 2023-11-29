@@ -121,10 +121,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Answers\" />
-    <Folder Include="Questions\" />
-    <Folder Include="src\" />
+    <Resource Include="Questions\AnagramQuestions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Answers\AnagramAnswers.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
