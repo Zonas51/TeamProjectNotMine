@@ -1,0 +1,9 @@
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\DidacticTrainClassLibrary.dll
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\DidacticTrainClassLibrary.pdb
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\Spire.XLS.dll
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\Spire.XLS.xml
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.CopyComplete
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.dll
+C:\Users\User\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.pdb
