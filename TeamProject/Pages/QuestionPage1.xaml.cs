@@ -39,7 +39,7 @@ namespace TeamProject.Pages
             exercise.QuestionList.Add(AllQuestionList[question]);
             exercise.AnswerList.Add(AllAnswerList[question]);
             QuestionCount--;
-            if (InputBox.Text == AllAnswerList[question])
+            if (InputBox.Text.ToLower() == AllAnswerList[question])
             {
                 exercise.UserCorrectAnswersCount++;
             }

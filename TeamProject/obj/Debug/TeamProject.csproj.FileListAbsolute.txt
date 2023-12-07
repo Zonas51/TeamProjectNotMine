@@ -48,3 +48,5 @@ C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.Propert
 C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.GenerateResource.cache
 C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CopyComplete
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\DidacticTrainClassLibrary.dll
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\DidacticTrainClassLibrary.pdb
