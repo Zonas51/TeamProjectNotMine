@@ -9,6 +9,7 @@ namespace TeamProject.Pages
     public partial class EndPage : Page
     {
         IExercise exercise;
+        IUser user;
         public EndPage(IExercise ex)
         {
             exercise = ex;
@@ -17,7 +18,7 @@ namespace TeamProject.Pages
 
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
-            IUser user = new User(Name.Text,Group.Text,Age.Text, exercise);
+            user = new User(Name.Text,Group.Text,Age.Text, exercise);
             ExcelSaver ex = new ExcelSaver();
             ex.Save(user);
             Application.Current.Shutdown();

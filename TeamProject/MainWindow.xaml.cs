@@ -10,6 +10,7 @@ namespace TeamProject
         public MainWindow()
         {
             InitializeComponent();
+            
             MainFrame.Content = new Pages.StartPage();
         }
 
