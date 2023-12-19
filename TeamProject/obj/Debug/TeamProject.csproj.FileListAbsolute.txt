@@ -50,3 +50,6 @@ C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.
 C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\TeamProject.csproj.CopyComplete
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\DidacticTrainClassLibrary.dll
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\DidacticTrainClassLibrary.pdb
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.baml

@@ -13,26 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TeamProject.Pages
+namespace TeamProject
 {
     /// <summary>
-    /// Логика взаимодействия для StartPage.xaml
+    /// Логика взаимодействия для MessagePopup.xaml
     /// </summary>
-    public partial class StartPage : Page
+    public partial class MessagePopup : UserControl
     {
-        public StartPage()
+        public MessagePopup()
         {
             InitializeComponent();
         }
 
-        private void BtnAnagramClick(object sender, RoutedEventArgs e)
+        private void BtnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AnagramQuestionPage(5));
-        }
-
-        private void BtnMathClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
+            Visibility=Visibility.Collapsed;
         }
     }
 }

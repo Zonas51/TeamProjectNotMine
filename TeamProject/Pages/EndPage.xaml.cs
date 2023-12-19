@@ -15,9 +15,10 @@ namespace TeamProject.Pages
             exercise = ex;
             InitializeComponent();
         }
-
+        
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
+            //TODO: ПРОВЕРКА
             user = new User(Name.Text,Group.Text,Age.Text, exercise);
             ExcelSaver ex = new ExcelSaver();
             ex.Save(user);

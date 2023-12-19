@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Markup;
 using System.Windows.Navigation;
 
 namespace TeamProject.Pages
@@ -24,7 +23,7 @@ namespace TeamProject.Pages
         public AnagramQuestionPage(int questionCount)
         {
             QuestionCount = questionCount;
-            AnagramQuestionGetter ag = new AnagramQuestionGetter();
+            MathQuestionGetter ag = new MathQuestionGetter();
             AllQuestionList = ag.GetQuestions("AnagramQuestions.txt");
             AllAnswerList = ag.GetAnswers("AnagramAnswers.txt");
 
@@ -37,15 +36,9 @@ namespace TeamProject.Pages
 
         private void AcceptBtnClick(object sender, RoutedEventArgs e)
         {
-            if (InputBox.Text == "")
-            {
-                messagePopup.Visibility = Visibility.Visible;
-                return;
-            }
             exercise.QuestionList.Add(AllQuestionList[question]);
             exercise.AnswerList.Add(AllAnswerList[question]);
             QuestionCount--;
-            messagePopup.Visibility = Visibility.Collapsed;
             if (InputBox.Text.ToLower() == AllAnswerList[question])
             {
                 exercise.UserCorrectAnswersCount++;
