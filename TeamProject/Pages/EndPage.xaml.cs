@@ -18,7 +18,11 @@ namespace TeamProject.Pages
         
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
-            //TODO: ПРОВЕРКА
+            if (Name.Text == "" || Group.Text == "" || Age.Text == "")
+            {
+                messagePopup.Visibility = Visibility.Visible;
+                return;
+            }
             user = new User(Name.Text,Group.Text,Age.Text, exercise);
             ExcelSaver ex = new ExcelSaver();
             ex.Save(user);

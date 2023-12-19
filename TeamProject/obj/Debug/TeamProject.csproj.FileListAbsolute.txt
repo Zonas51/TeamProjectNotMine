@@ -53,3 +53,6 @@ C:\Users\Oxion7\source\repos\TeamProject\TeamProject\bin\Debug\DidacticTrainClas
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.g.cs
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.baml
+C:\Users\User\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.g.cs
+C:\Users\User\source\repos\TeamProject\TeamProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.baml
