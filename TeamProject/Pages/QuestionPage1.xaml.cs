@@ -50,11 +50,15 @@ namespace TeamProject.Pages
             }
             else
             {
-                question = Random.Next(AllAnswerList.Count);
-                QuestionText = AllQuestionList[question];
-                Question.Text = QuestionText;
-                InputBox.Text = "";
+                NextQuestion();
             }
+        }
+        private void NextQuestion()
+        {
+            question = Random.Next(AllAnswerList.Count);
+            QuestionText = AllQuestionList[question];
+            Question.Text = QuestionText;
+            InputBox.Text = "";
         }
     }
 }

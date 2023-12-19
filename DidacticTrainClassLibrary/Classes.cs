@@ -35,7 +35,6 @@ namespace TeamProject
     {
         internal static List<string> ReadListFromFile(string filename, string foldername)
         {
-            //TODO: make it read each line individually
             string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
             List<string> AnList = new List<string>();
             using (StreamReader sr = new StreamReader(filepath))
@@ -61,7 +60,6 @@ namespace TeamProject
     {
         public override List<string> GetQuestions(string filename)
         {
-
             List<string> list = ReadListFromFile(filename, "Questions");
             for (int i = 0; i < list.Count(); i++)
             {
@@ -90,15 +88,6 @@ namespace TeamProject
     }
     public class MathQuestionGetter : ExerciseQuestionGetter
     {
-        public override List<string> GetAnswers(string filename)
-        {
-            throw new NotImplementedException(); //TODO: make
-        }
-
-        public List<string> GetExercise(string filename)
-        {
-            throw new NotImplementedException(); //TODO: make
-        }
     }
 
     public class ExcelSaver : ISaver
@@ -111,7 +100,6 @@ namespace TeamProject
                 workbook.LoadTemplateFromFile("Results.xlsx");
             }
             Worksheet worksheet = workbook.Worksheets[0];
-            //TODO: сделать столбцы фио, группа, класс в excel
             worksheet.InsertRow(1);
             worksheet[1, 1].Text = "Имя:";
             worksheet[1, 2].Text = "Группа:";
