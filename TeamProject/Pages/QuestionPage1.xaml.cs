@@ -40,6 +40,7 @@ namespace TeamProject.Pages
             if (InputBox.Text == "" || InputBox.Text.Length > 20)
             {
                 messagePopup.Visibility = Visibility.Visible;
+                InputBox.Text = "";
                 return;
             }
             exercise.QuestionList.Add(AllQuestionList[question]);
