@@ -1,4 +1,5 @@
 ﻿using DidacticTrainClassLibrary;
+using DidacticTrainClassLibrary.Interfaces;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -34,7 +35,7 @@ namespace TeamProject.Pages
             Saver.Save(user);
             Application.Current.Shutdown();
         }
-        bool StringIsDigits(string s)
+        private bool StringIsDigits(string s)
         {
             foreach (var item in s)
             {
@@ -43,5 +44,6 @@ namespace TeamProject.Pages
             }
             return true;
         }
+
     }
 }

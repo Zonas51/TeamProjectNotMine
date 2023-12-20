@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Classes\Exercise.cs" />
     <Compile Include="Classes\ExerciseQuestionGetter.cs" />
-    <Compile Include="Interfaces.cs" />
+    <Compile Include="Interfaces\IGetter.cs" />
+    <Compile Include="Interfaces\ISaver.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Saver.cs" />
     <Compile Include="Classes\User.cs" />

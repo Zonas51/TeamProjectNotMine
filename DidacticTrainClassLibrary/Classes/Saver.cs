@@ -1,6 +1,6 @@
-﻿using Spire.Xls;
+﻿using DidacticTrainClassLibrary.Interfaces;
+using Spire.Xls;
 using System.IO;
-using TeamProject;
 
 namespace DidacticTrainClassLibrary
 {
