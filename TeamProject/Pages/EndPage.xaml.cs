@@ -10,6 +10,7 @@ namespace TeamProject.Pages
     {
         IExercise exercise;
         IUser user;
+        ISaver Saver = new ExcelSaver();
         public EndPage(IExercise ex)
         {
             exercise = ex;
@@ -18,15 +19,25 @@ namespace TeamProject.Pages
         
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
-            if (Name.Text == "" || Group.Text == "" || Age.Text == "")
+            if (Name.Text == "" || Group.Text == "" || Age.Text == "" ||
+                Name.Text.Length > 40 || Group.Text.Length > 20 || StringIsDigits(Age.Text) == false ||
+                Age.Text.Length > 100)
             {
                 messagePopup.Visibility = Visibility.Visible;
                 return;
             }
             user = new User(Name.Text,Group.Text,Age.Text, exercise);
-            ExcelSaver ex = new ExcelSaver();
-            ex.Save(user);
+            Saver.Save(user);
             Application.Current.Shutdown();
+        }
+        bool StringIsDigits(string s)
+        {
+            foreach (var item in s)
+            {
+                if (!char.IsDigit(item))
+                    return false; 
+            }
+            return true;
         }
     }
 }

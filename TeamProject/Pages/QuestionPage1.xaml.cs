@@ -37,7 +37,7 @@ namespace TeamProject.Pages
 
         private void AcceptBtnClick(object sender, RoutedEventArgs e)
         {
-            if (InputBox.Text == "")
+            if (InputBox.Text == "" || InputBox.Text.Length > 20)
             {
                 messagePopup.Visibility = Visibility.Visible;
                 return;
