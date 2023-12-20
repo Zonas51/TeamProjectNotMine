@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using DidacticTrainClassLibrary;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace TeamProject.Pages

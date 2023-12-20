@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes.cs" />
+    <Compile Include="Classes\Exercise.cs" />
+    <Compile Include="Classes\ExerciseQuestionGetter.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Saver.cs" />
+    <Compile Include="Classes\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
