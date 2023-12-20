@@ -8,7 +8,7 @@ namespace TeamProject
 {
     public class User : IUser
     {
-        public User(string name, string group, string age, IExercise exercise) 
+        public User(string name, string group, string age, Exercise exercise) 
         {
             Name = name;
             Group = group;
@@ -18,22 +18,23 @@ namespace TeamProject
         public string Name { get; set; }
         public string Group { get; set; }
         public string Age { get; set; }
-        public IExercise Exercise { get; set; }
+        public Exercise Exercise { get; set; }
     }
-    public class ExerciseAnagram : IExercise
+    public abstract class Exercise
     {
         public List<string> QuestionList { get; set; } = new List<string>();
         public List<string> AnswerList { get; set; } = new List<string>();
         public int UserCorrectAnswersCount { get; set; } = 0;
-
-        public int GetUserCorrectAnswersCount()
-        {
-            return UserCorrectAnswersCount;
-        }
+    }
+    public class ExerciseAnagram : Exercise
+    {
+    }
+    public class ExerciseMath : Exercise
+    { 
     }
     public abstract class ExerciseQuestionGetter : IGetter
     {
-        internal static List<string> ReadListFromFile(string filename, string foldername)
+        internal virtual List<string> ReadListFromFile(string filename, string foldername)
         {
             string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
             List<string> AnList = new List<string>();
@@ -88,6 +89,20 @@ namespace TeamProject
     }
     public class MathQuestionGetter : ExerciseQuestionGetter
     {
+        internal override List<string> ReadListFromFile(string filename, string foldername)
+        {
+            string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
+            List<string> AnList = new List<string>();
+            using (StreamReader sr = new StreamReader(filepath))
+            {
+                string[] input = sr.ReadToEnd().Replace("\r","").Split('\n');
+                foreach (string item in input)
+                {
+                    AnList.Add(item);
+                }
+            }
+            return AnList;
+        }
     }
 
     public class ExcelSaver : ISaver

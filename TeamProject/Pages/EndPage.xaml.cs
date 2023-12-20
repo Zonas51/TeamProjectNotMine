@@ -8,10 +8,10 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class EndPage : Page
     {
-        IExercise exercise;
+        Exercise exercise;
         IUser user;
         ISaver Saver = new ExcelSaver();
-        public EndPage(IExercise ex)
+        public EndPage(Exercise ex)
         {
             exercise = ex;
             InitializeComponent();

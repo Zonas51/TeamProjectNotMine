@@ -32,7 +32,12 @@ namespace TeamProject.Pages
 
         private void BtnMathClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            NavigationService.Navigate(new QuestionPageMath(5));
+        }
+
+        private void ButtonExitClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

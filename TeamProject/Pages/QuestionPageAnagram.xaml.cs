@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Markup;
 using System.Windows.Navigation;
 
 namespace TeamProject.Pages
@@ -9,18 +10,18 @@ namespace TeamProject.Pages
     /// <summary>
     /// Логика взаимодействия для QuestionPage1.xaml
     /// </summary>
-    public partial class MathQuestionPage : Page
+    public partial class AnagramQuestionPage : Page
     {
         private int QuestionCount;
         private List<string> AllQuestionList;
         private List<string> AllAnswerList;
-        private ExerciseMath exercise = new ExerciseMath();
+        private ExerciseAnagram exercise = new ExerciseAnagram();
         private Random Random = new Random();
         public string QuestionText { get; set; }
         private int question;
 
 
-        public MathQuestionPage(int questionCount)
+        public AnagramQuestionPage(int questionCount)
         {
             QuestionCount = questionCount;
             AnagramQuestionGetter ag = new AnagramQuestionGetter();
@@ -36,9 +37,15 @@ namespace TeamProject.Pages
 
         private void AcceptBtnClick(object sender, RoutedEventArgs e)
         {
+            if (InputBox.Text == "" || InputBox.Text.Length > 20)
+            {
+                messagePopup.Visibility = Visibility.Visible;
+                return;
+            }
             exercise.QuestionList.Add(AllQuestionList[question]);
             exercise.AnswerList.Add(AllAnswerList[question]);
             QuestionCount--;
+            messagePopup.Visibility = Visibility.Collapsed;
             if (InputBox.Text.ToLower() == AllAnswerList[question])
             {
                 exercise.UserCorrectAnswersCount++;

@@ -16,7 +16,6 @@ namespace TeamProject.Pages
         private List<string> AllQuestionList;
         private List<string> AllAnswerList;
         private ExerciseAnagram exercise = new ExerciseAnagram();
-        private Random Random = new Random();
         public string QuestionText { get; set; }
         private int question;
 
@@ -27,8 +26,8 @@ namespace TeamProject.Pages
             AnagramQuestionGetter ag = new AnagramQuestionGetter();
             AllQuestionList = ag.GetQuestions("AnagramQuestions.txt");
             AllAnswerList = ag.GetAnswers("AnagramAnswers.txt");
-
-            question = Random.Next(AllAnswerList.Count);
+            Random r = new Random();
+            question = r.Next(AllAnswerList.Count);
             QuestionText = AllQuestionList[question];
             DataContext = this;
             InitializeComponent();
@@ -46,7 +45,7 @@ namespace TeamProject.Pages
             exercise.AnswerList.Add(AllAnswerList[question]);
             QuestionCount--;
             messagePopup.Visibility = Visibility.Collapsed;
-            if (InputBox.Text.ToLower() == AllAnswerList[question])
+            if (InputBox.Text.ToLower().Trim() == AllAnswerList[question])
             {
                 exercise.UserCorrectAnswersCount++;
             }
@@ -62,7 +61,8 @@ namespace TeamProject.Pages
         }
         private void NextQuestion()
         {
-            question = Random.Next(AllAnswerList.Count);
+            Random r = new Random();
+            question = r.Next(AllAnswerList.Count);
             QuestionText = AllQuestionList[question];
             Question.Text = QuestionText;
             InputBox.Text = "";

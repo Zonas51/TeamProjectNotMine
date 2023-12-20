@@ -27,7 +27,19 @@
                 Click="BtnAnagramClick"
                 >
         </Button>
-
+        <Button x:Name="StartMath" 
+        Grid.Row="0" 
+        Grid.Column="1" 
+        Content="Математика" 
+        Margin="30" 
+        FontSize="20" 
+        Click="BtnMathClick"
+        >
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" Margin="120,120,30,30" 
+                Content="Выход" 
+                FontSize="20" 
+                Click="ButtonExitClick"/>
     </Grid>
 
 </Page>

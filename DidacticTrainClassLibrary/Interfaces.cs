@@ -11,7 +11,7 @@ namespace TeamProject
         string Name { get; set; }
         string Group { get; set; }
         string Age {  get; set; }
-        IExercise Exercise { get; set; }
+        Exercise Exercise { get; set; }
     }
     public interface  IGetter
     {
@@ -21,13 +21,5 @@ namespace TeamProject
     public interface ISaver
     {
         void Save(IUser usr);
-    }
-    public interface IExercise
-    {
-        List<string> QuestionList { get; set; }
-        List<string> AnswerList { get; set; }
-        int UserCorrectAnswersCount { get; set; }
-
-        int GetUserCorrectAnswersCount();
     }
 }
