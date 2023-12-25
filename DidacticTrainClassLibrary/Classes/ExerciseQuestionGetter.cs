@@ -10,7 +10,7 @@ namespace DidacticTrainClassLibrary
     {
         internal virtual List<string> ReadListFromFile(string filename, string foldername)
         {
-            string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
+            string filepath = AppContext.BaseDirectory + "\\data\\" + foldername + "\\" + filename;
             List<string> AnList = new List<string>();
             using (StreamReader sr = new StreamReader(filepath))
             {
@@ -65,7 +65,7 @@ namespace DidacticTrainClassLibrary
     {
         internal override List<string> ReadListFromFile(string filename, string foldername)
         {
-            string filepath = AppContext.BaseDirectory + "..\\..\\" + foldername + "\\" + filename;
+            string filepath = AppContext.BaseDirectory + "\\data\\" + foldername + "\\" + filename;
             List<string> AnList = new List<string>();
             using (StreamReader sr = new StreamReader(filepath))
             {

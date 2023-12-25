@@ -8,10 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("didactictrainclasslibrary/bin/debug/didactictrainclasslibrary.dll")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("didactictrainclasslibrary/bin/debug/didactictrainclasslibrary.pdb")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("didactictrainclasslibrary/bin/debug/spire.xls.dll")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("didactictrainclasslibrary/obj/debug/didactictrainclasslibrary.dll")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("didactictrainclasslibrary/obj/debug/didactictrainclasslibrary.pdb")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon.ico")]
 
 
