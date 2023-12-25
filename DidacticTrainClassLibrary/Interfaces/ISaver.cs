@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DidacticTrainClassLibrary.Classes;
 
 namespace DidacticTrainClassLibrary.Interfaces
 {
     public interface ISaver
     {
-        void Save(IUser usr);
+        void Save(IStatistics statistics);
     }
 }

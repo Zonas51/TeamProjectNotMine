@@ -16,3 +16,12 @@ C:\Users\Oxion7\source\repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\Tea
 C:\Users\Oxion7\source\repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.dll
 C:\Users\Oxion7\source\repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.pdb
 C:\Users\User\source\repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\DidacticTrainClassLibrary.dll
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\DidacticTrainClassLibrary.pdb
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\Spire.XLS.dll
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\bin\Debug\Spire.XLS.xml
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\TeamProjectClassLibrary.csproj.CopyComplete
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.dll
+C:\Users\Artem\Source\Repos\TeamProject\DidacticTrainClassLibrary\obj\Debug\DidacticTrainClassLibrary.pdb

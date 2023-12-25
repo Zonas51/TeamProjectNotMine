@@ -1,4 +1,6 @@
 ﻿using DidacticTrainClassLibrary;
+using DidacticTrainClassLibrary.Classes;
+using DidacticTrainClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,8 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class QuestionPageMath : Page
     {
+        IStatistics stat = new Statistics();
+
         private int QuestionCount;
         private List<string> AllQuestionList;
         private List<string> AllAnswerList;
@@ -36,6 +40,7 @@ namespace TeamProject.Pages
             Random r = new Random();
             question = r.Next(AllAnswerList.Count);
             QuestionText = AllQuestionList[question];
+            stat.ExName = exercise.Name;
             DataContext = this;
             InitializeComponent();
         }
@@ -53,12 +58,13 @@ namespace TeamProject.Pages
             messagePopup.Visibility = Visibility.Collapsed;
             if (InputBox.Text.ToLower() == AllAnswerList[question])
             {
-                exercise.UserCorrectAnswersCount++;
+                stat.UserCorrectAnswersCount++;
             }
+            stat.AllAnswersCount++;
 
             if (QuestionCount == 0)
             {
-                NavigationService.Navigate(new EndPage(exercise));
+                NavigationService.Navigate(new EndPage(stat));
             }
             else
             {

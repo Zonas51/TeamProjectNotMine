@@ -27,12 +27,29 @@ namespace TeamProject.Pages
 
         private void BtnAnagramClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AnagramQuestionPage(5));
+            try
+            {
+                NavigationService.Navigate(new AnagramQuestionPage(5));
+            }
+            catch (Exception)
+            {
+
+                messagePopup.Visibility = Visibility.Visible;
+            }
+            
         }
 
         private void BtnMathClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionPageMath(5));
+            try
+            {
+                NavigationService.Navigate(new QuestionPageMath(5));
+            }
+            catch (Exception)
+            {
+
+                messagePopup.Visibility = Visibility.Visible;
+            }
         }
 
         private void ButtonExitClick(object sender, RoutedEventArgs e)

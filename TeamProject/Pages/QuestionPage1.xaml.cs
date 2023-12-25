@@ -1,4 +1,6 @@
 ﻿using DidacticTrainClassLibrary;
+using DidacticTrainClassLibrary.Classes;
+using DidacticTrainClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -13,6 +15,8 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class AnagramQuestionPage : Page
     {
+        IStatistics stat = new Statistics();
+
         private int QuestionCount;
         private List<string> AllQuestionList;
         private List<string> AllAnswerList;
@@ -31,6 +35,7 @@ namespace TeamProject.Pages
             question = r.Next(AllAnswerList.Count);
             QuestionText = AllQuestionList[question];
             DataContext = this;
+            stat.ExName = exercise.Name;
             InitializeComponent();
         }
 
@@ -49,12 +54,12 @@ namespace TeamProject.Pages
             messagePopup.Visibility = Visibility.Collapsed;
             if (InputBox.Text.ToLower().Trim() == AllAnswerList[question])
             {
-                exercise.UserCorrectAnswersCount++;
+                stat.UserCorrectAnswersCount++;
             }
-
+            stat.AllAnswersCount++;
             if (QuestionCount == 0)
             {
-                NavigationService.Navigate(new EndPage(exercise));
+                NavigationService.Navigate(new EndPage(stat));
             }
             else
             {

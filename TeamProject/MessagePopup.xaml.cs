@@ -24,6 +24,11 @@ namespace TeamProject
         {
             InitializeComponent();
         }
+        public MessagePopup(string text)
+        {
+            TextWarn.Text = text;
+            InitializeComponent();
+        }
 
         private void BtnClick(object sender, RoutedEventArgs e)
         {

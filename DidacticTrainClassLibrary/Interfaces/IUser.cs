@@ -11,6 +11,5 @@ namespace DidacticTrainClassLibrary.Interfaces
         string Name { get; set; }
         string Group { get; set; }
         string Age { get; set; }
-        Exercise Exercise { get; set; }
     }
 }

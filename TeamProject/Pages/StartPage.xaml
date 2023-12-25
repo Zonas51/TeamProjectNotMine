@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TeamProject"
+      xmlns:popup="clr-namespace:TeamProject"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="StartPage"
@@ -39,7 +40,10 @@
         <Button Grid.Column="1" Grid.Row="1" Margin="120,120,30,30" 
                 Content="Выход" 
                 FontSize="20" 
-                Click="ButtonExitClick"/>
+                Click="ButtonExitClick">
+        </Button>
+        <popup:MessagePopupFileWarn x:Name="messagePopup" Visibility="Collapsed" Grid.ColumnSpan="3"
+                        Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 
 </Page>

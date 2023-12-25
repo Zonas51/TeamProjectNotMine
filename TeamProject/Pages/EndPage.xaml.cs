@@ -10,20 +10,19 @@ namespace TeamProject.Pages
     /// </summary>
     public partial class EndPage : Page
     {
-        Exercise exercise;
-        IUser user;
+        IStatistics statistics;
         ISaver Saver = new ExcelSaver();
-        public EndPage(Exercise ex)
+        public EndPage(IStatistics _statistics)
         {
-            exercise = ex;
+            statistics = _statistics;
             InitializeComponent();
         }
         
         private void AptButtonClick(object sender, RoutedEventArgs e)
         {
             if (Name.Text == "" || Group.Text == "" || Age.Text == "" ||
-                Name.Text.Length > 40 || Group.Text.Length > 20 || Age.Text.Length > 100 ||
-                StringIsDigits(Age.Text) == false )
+                Name.Text.Length > 40 || Group.Text.Length > 20 || StringIsDigits(Age.Text) == false || 
+                int.Parse(Age.Text) > 100 || int.Parse(Age.Text) < 0)
             {
                 messagePopup.Visibility = Visibility.Visible;
                 Name.Text = "";
@@ -31,8 +30,8 @@ namespace TeamProject.Pages
                 Age.Text = "";
                 return;
             }
-            user = new User(Name.Text,Group.Text,Age.Text, exercise);
-            Saver.Save(user);
+            statistics.User = new User(Name.Text,Group.Text,Age.Text);
+            Saver.Save(statistics);
             Application.Current.Shutdown();
         }
         private bool StringIsDigits(string s)
