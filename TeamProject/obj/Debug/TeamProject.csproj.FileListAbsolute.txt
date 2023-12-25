@@ -58,3 +58,5 @@ C:\Users\User\source\repos\TeamProject\TeamProject\obj\Debug\GeneratedInternalTy
 C:\Users\User\source\repos\TeamProject\TeamProject\obj\Debug\MessagePopup.baml
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPageMath.g.cs
 C:\Users\Oxion7\source\repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPageMath.baml
+C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPageMath.g.cs
+C:\Users\User\Source\Repos\TeamProject\TeamProject\obj\Debug\Pages\QuestionPageMath.baml
